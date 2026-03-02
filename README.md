@@ -33,7 +33,6 @@ Project Hierarchy:
 
 GIT:
 ----
-
 1) laptop <-> website
 
       git config --global user.name  "Your Name"
@@ -50,6 +49,10 @@ GIT:
 
 3) sync code
 
-      
+      git add .
+      git commit -m "first commit"
+      git push
+
+      **) first time follow the suggestion command
 
       
