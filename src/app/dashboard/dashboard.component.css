@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Parent container */
+.parent {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+/* LEFT SIDEBAR */
+.left {
+  width: 240px;
+  background: #1e293b; /* dark slate */
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* App title */
+.left h1 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #38bdf8;
+}
+
+/* Menu */
+.left ul {
+  list-style: none;
+  margin-bottom: auto; /* pushes logout button down */
+}
+
+.left ul li {
+  padding: 12px 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.left ul li:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Logout button */
+.left button {
+  margin-top: 20px;
+  padding: 10px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.left button:hover {
+  background: #dc2626;
+}
+
+/* RIGHT CONTENT */
+.right {
+  flex: 1;
+  padding: 24px;
+  background: #ffffff;
+}

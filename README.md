@@ -1,27 +1,55 @@
-# MyApp
+Angular:
+--------
+Angular is a framework to build single page applicaitons(SPA).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+   Framework: combination of languages, libraries
 
-## Development server
+Start:
+------
+1) download and install node js
+      check: node-v
+      check: npm -v
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2) install angular
+      npm install -g @angular/cli@15
+      check: ng version
 
-## Code scaffolding
+3) create new angular app
+      ng new my-app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+4) ng serve
 
-## Build
+***) First time allow scripts exection 
+   1) open powersell has administrator
+   2) run the command: set-executionPolicy unrestricted
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Project Hierarchy:
+==================
+![alt text](notes/image.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+GIT:
+----
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1) laptop <-> website
+
+      git config --global user.name  "Your Name"
+      git config --global user.email "Your email"
+
+      check: git config --list
+
+2) folder <-> repository
+
+      git init
+      git remote add origin xxxxxxxxxxxxxxxxxx
+
+      check: git remote -v
+
+3) sync code
+
+      
+
+      
