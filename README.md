@@ -59,3 +59,10 @@ GIT:
 
 Angular Architecture:
 =====================
+
+Directives:  useful to alter the DOM
+==========
+
+      1) structural directives: *ngFor, *ngIf
+
+      2) attrivute direcgties: [ngClass]  [ngStyle]

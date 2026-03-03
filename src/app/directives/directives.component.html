@@ -1,0 +1,35 @@
+<p>directives works!</p>
+
+<p *ngFor="let city of cities">{{city}}</p>
+
+<ol>
+    <li *ngFor="let city of cities">{{city}}</li>
+</ol>
+
+<select name="" id="">
+    <option *ngFor="let city of cities">{{city}}</option>
+</select>
+
+<p *ngFor="let product of products">
+    {{product.name}} price is {{product.price}}
+</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>SNO</th>
+            <th>name</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h1 *ngIf="isValid">helloooooooo</h1>

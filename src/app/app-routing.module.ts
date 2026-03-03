@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
     {path:'home', component: HomeComponent},
     {path:'welcome', component: WelcomeComponent},
     {path:'data-binding', component: DataBindingComponent},
-    {path:'calculator', component: CalculatorComponent}
+    {path:'calculator', component: CalculatorComponent},
+    {path:'directives', component: DirectivesComponent}
   ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PageNotFoundComponent}
