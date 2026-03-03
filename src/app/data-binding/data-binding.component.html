@@ -1,0 +1,14 @@
+<p>data-binding works!</p>
+
+<!-- Interpolattion -->
+<h1>My name is {{name}} and age is {{age}}</h1>
+<!-- property binding -->
+<button [disabled]="isInvalid">upload</button>
+
+<!-- two way binding -->
+<input type="text" placeholder="city" [(ngModel)]="city">
+<br><br>
+
+<!-- Event bidnding -->
+<button (click)="submit()">submit</button>
+

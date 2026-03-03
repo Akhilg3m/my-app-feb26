@@ -49,10 +49,13 @@ GIT:
 
 3) sync code
 
-      git add .
-      git commit -m "first commit"
-      git push
+      git add .                        // check: changes->staged changes
+      git commit -m "first commit"     // staged chages -> 0
+      git push                         // upload percentage 100%, github commit list
+
 
       **) first time follow the suggestion command
 
-      
+
+Angular Architecture:
+=====================
