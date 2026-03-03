@@ -6,13 +6,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, children:[
     {path:'home', component: HomeComponent},
     {path:'welcome', component: WelcomeComponent},
-    {path:'data-binding', component: DataBindingComponent}
+    {path:'data-binding', component: DataBindingComponent},
+    {path:'calculator', component: CalculatorComponent}
   ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PageNotFoundComponent}
