@@ -12,6 +12,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EventRegistrationComponent } from './event-registration/event-registration.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DirectivesComponent } from './directives/directives.component';
     WelcomeComponent,
     DataBindingComponent,
     CalculatorComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EventRegistrationComponent
   ],
   imports: [
     BrowserModule,
