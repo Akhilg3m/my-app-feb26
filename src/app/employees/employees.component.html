@@ -1,0 +1,60 @@
+<h2>Create Employee</h2>
+
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+<label for="">Company:</label>
+<input type="text" [(ngModel)]="company">
+<br>
+<label for="">Package:</label>
+<input type="text" [(ngModel)]="package">
+<br>
+<label for="">Experience:</label>
+<input type="number" [(ngModel)]="exp">
+<br>
+<label for="">Role:</label>
+<input type="text" [(ngModel)]="role">
+<br>
+<button (click)="add()" class="btn btn-primary">Add Employee</button>
+
+<hr>
+<h2>Actions</h2>
+<button class="btn btn-info" (click)="above3exp()">above 3yrs exp</button>
+<button class="btn btn-info" (click)="tcs()">TCS employees</button>
+
+<button class="btn btn-warning" (click)="addmr()">add mr before name</button>
+<button class="btn btn-warning" (click)="add1yr()">add 1 yr exp</button>
+
+<button class="btn btn-secondary" (click)="expLH()">exp low to high</button>
+<button class="btn btn-secondary" (click)="expHL()">exp high to low</button>
+
+<button class="btn btn-primary" (click)="total()">total employees</button>
+
+<hr>
+<h2>Employees</h2>
+<table class="table table-dark table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>SNO</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Package</th>
+            <th>Experience</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.company}}</td>
+            <td>{{employee.package}}</td>
+            <td>{{employee.exp}}</td>
+            <td>{{employee.role}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
