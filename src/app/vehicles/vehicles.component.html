@@ -1,0 +1,33 @@
+<p>vehicles works!</p>
+
+<table class="table table-dark table-bordered table-hovered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Vehicle</th>
+            <th>Manufactuerer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>cost</th>
+            <th>tyres</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.id}}</td>
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.image}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.tyres}}</td>
+
+        </tr>
+    </tbody>
+</table>

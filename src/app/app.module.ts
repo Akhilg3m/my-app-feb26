@@ -13,7 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
-
+import { EmployeesComponent } from './employees/employees.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +27,15 @@ import { EventRegistrationComponent } from './event-registration/event-registrat
     DataBindingComponent,
     CalculatorComponent,
     DirectivesComponent,
-    EventRegistrationComponent
+    EventRegistrationComponent,
+    EmployeesComponent,
+    VehiclesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

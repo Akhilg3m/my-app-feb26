@@ -66,3 +66,59 @@ Directives:  useful to alter the DOM
       1) structural directives: *ngFor, *ngIf
 
       2) attrivute direcgties: [ngClass]  [ngStyle]
+
+
+      ng g c employees
+
+
+API INTEGRATION:
+================
+
+Client server architecture:
+----------------------------
+
+Sync vs async code
+------------------
+
+RxJS: Reactive exptenstion for javascript
+-----
+
+          Promise                             Observable                                 
+      --------------                        --------------                            
+1)  single call back                        multi call back 
+
+2)  can not cancel                          can cancel in between      
+
+
+
+      Observable                               Subject
+      ----------                            --------------
+1)   unicasting                             multi casting
+
+
+component vs service
+--------------------
+component:   view
+service: logics oter than view
+
+
+Data flow in frontend applications
+----------------------------------
+
+
+Coding steps:
+-------------
+0) create component and service
+
+1) import HttpClientModule in appModule
+
+2) inject HttpClient service in vehicle service
+
+3) method to hit api with get method
+   it return observabel of data
+
+4) inject vehicle service in vehicle component
+   subscribe to the observable to get the data
+
+5) in html iterate over the array with *ngFor
+
