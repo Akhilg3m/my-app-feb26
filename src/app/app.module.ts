@@ -18,6 +18,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PricePipe } from './price.pipe';
 import { RolePipe } from './role.pipe';
+import { HighlightDirective } from './highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { RolePipe } from './role.pipe';
     EmployeesComponent,
     VehiclesComponent,
     PricePipe,
-    RolePipe
+    RolePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
