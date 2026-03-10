@@ -25,11 +25,18 @@
     <tbody>
         <tr *ngFor="let product of products; let i = index">
             <td>{{i+1}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
+            <td [ngClass]="{'costly':product.price>2000, 'cheap':product.price<2000}">{{product.name|uppercase}}</td>
+            <td [ngStyle]="{ 'color': product.price>20000?'red':'green' }">{{product.price}}</td>
         </tr>
     </tbody>
 </table>
 
-
 <h1 *ngIf="isValid">helloooooooo</h1>
+
+<h1>{{today}}</h1>
+
+<h1>{{today|date}}</h1>
+<h1>{{today|date:'yyyy/MM/dd'}}</h1>
+<h1>{{today|date:'yy-MM-dd hh:mm:ss'}}</h1>
+
+<h1>{{user|json}}</h1>

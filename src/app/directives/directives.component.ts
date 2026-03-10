@@ -19,4 +19,8 @@ export class DirectivesComponent {
 
   isValid:boolean = true;
 
+  today:any = new Date();
+
+  user:any = {name:'abc',age:20};
+
 }
