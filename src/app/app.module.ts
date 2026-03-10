@@ -16,6 +16,8 @@ import { EventRegistrationComponent } from './event-registration/event-registrat
 import { EmployeesComponent } from './employees/employees.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PricePipe } from './price.pipe';
+import { RolePipe } from './role.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     DirectivesComponent,
     EventRegistrationComponent,
     EmployeesComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    PricePipe,
+    RolePipe
   ],
   imports: [
     BrowserModule,

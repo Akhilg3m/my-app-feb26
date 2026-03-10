@@ -27,8 +27,10 @@
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.fuel}}</td>
             <td>{{vehicle.color}}</td>
-            <td>{{vehicle.image}}</td>
-            <td>{{vehicle.cost}}</td>
+            <td>
+                <img src="{{vehicle.image}}" alt="" width="100px" height="100px">
+            </td>
+            <td>{{vehicle.cost | price}}</td>
             <td>{{vehicle.tyres}}</td>
 
         </tr>

@@ -26,7 +26,7 @@
         <tr *ngFor="let product of products; let i = index">
             <td>{{i+1}}</td>
             <td [ngClass]="{'costly':product.price>2000, 'cheap':product.price<2000}">{{product.name|uppercase}}</td>
-            <td [ngStyle]="{ 'color': product.price>20000?'red':'green' }">{{product.price}}</td>
+            <td [ngStyle]="{ 'color': product.price>20000?'red':'green' }">{{product.price | price}}</td>
         </tr>
     </tbody>
 </table>
