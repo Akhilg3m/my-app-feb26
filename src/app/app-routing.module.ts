@@ -24,7 +24,8 @@ const routes: Routes = [
     {path:'event-registration', component: EventRegistrationComponent},
     {path:'employees', component:EmployeesComponent},
     {path:'vehicles', component:VehiclesComponent},
-    {path:'contact-ceo', component:ContactCeoComponent}
+    {path:'contact-ceo', component:ContactCeoComponent},
+    {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},
   {path:'**', component: PageNotFoundComponent}
