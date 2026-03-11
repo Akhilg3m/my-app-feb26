@@ -122,3 +122,32 @@ Coding steps:
 
 5) in html iterate over the array with *ngFor
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

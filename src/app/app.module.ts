@@ -20,6 +20,8 @@ import { PricePipe } from './price.pipe';
 import { RolePipe } from './role.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CapitalDirective } from './capital.directive';
+import { ContactModule } from './contact/contact.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,8 @@ import { CapitalDirective } from './capital.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ContactModule
   ],
   providers: [],
   bootstrap: [AppComponent]
