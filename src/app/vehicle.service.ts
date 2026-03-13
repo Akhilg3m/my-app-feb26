@@ -10,7 +10,23 @@ export class VehicleService {
   constructor(private httpClient:HttpClient) { }
   
   getVehicles():Observable<any>{
-    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction");
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page=1");
+  }
+
+  filterVehicles(term:string):Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
+  }
+
+  pagedVehicles(page:number):Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit=10&page="+page);
+  }
+
+  sortVehicles(column:string, order:string):Observable<any>{
+    return this.httpClient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy="+column+"&order="+order);
+  }
+
+  deleteVehicle(id:string):Observable<any>{
+    return this.httpClient.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id);
   }
   
 }
