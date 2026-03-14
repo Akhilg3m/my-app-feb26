@@ -12,6 +12,7 @@ import { EventRegistrationComponent } from './event-registration/event-registrat
 import { EmployeesComponent } from './employees/employees.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
+import { Vehicles2Component } from './vehicles2/vehicles2.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path:'employees', component:EmployeesComponent},
     {path:'vehicles', component:VehiclesComponent},
     {path:'contact-ceo', component:ContactCeoComponent},
+    {path:'vehicles2', component:Vehicles2Component},
     {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},

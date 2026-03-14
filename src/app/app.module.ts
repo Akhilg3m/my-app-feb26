@@ -21,6 +21,7 @@ import { RolePipe } from './role.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { CapitalDirective } from './capital.directive';
 import { ContactModule } from './contact/contact.module';
+import { Vehicles2Component } from './vehicles2/vehicles2.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ContactModule } from './contact/contact.module';
     PricePipe,
     RolePipe,
     HighlightDirective,
-    CapitalDirective
+    CapitalDirective,
+    Vehicles2Component
   ],
   imports: [
     BrowserModule,

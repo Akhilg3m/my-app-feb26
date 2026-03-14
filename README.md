@@ -151,3 +151,35 @@ Coding steps:
 
 
 
+
+ng g c create-user
+------------------
+name
+age
+email
+phone
+
+
+ng g c create-vehicle
+---------------------
+ {
+    "Vehicle": "Mazda Model 3",
+    "manufacturer": "Renault",
+    "model": "Malibu",
+    "type": "Extended Cab Pickup",
+    "fuel": "Diesel",
+    "color": "gold",
+    "image": "https://picsum.photos/seed/BazcWx/108/1909",
+    "cost": "408.09",
+    "tyres": 89,
+  },
+
+
+
+
+
+Template Driven Forms: ng-model
+----------------------
+
+Reactive Forms:
+---------------
