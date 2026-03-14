@@ -1,0 +1,22 @@
+<h1>Create User</h1>
+
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    
+    <label for="">Age:</label>
+    <input type="number" formControlName="age">
+    <br>
+    
+    <label for="">Email:</label>
+    <input type="email" formControlName="email">
+    <br>
+    
+    <label for="">Phone:</label>
+    <input type="phone" formControlName="phone">
+    <br>
+    
+    <input type="submit">
+</form>

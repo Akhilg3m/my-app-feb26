@@ -13,6 +13,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
 import { Vehicles2Component } from './vehicles2/vehicles2.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
     {path:'vehicles', component:VehiclesComponent},
     {path:'contact-ceo', component:ContactCeoComponent},
     {path:'vehicles2', component:Vehicles2Component},
+    {path:'create-user', component:CreateUserComponent},
     {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},

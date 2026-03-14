@@ -183,3 +183,8 @@ Template Driven Forms: ng-model
 
 Reactive Forms:
 ---------------
+1) FormGroup
+2) NestedFormGroup
+3) FormArray
+4) Dynamic forms
+5) Form Validations
