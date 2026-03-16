@@ -14,10 +14,12 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { ContactCeoComponent } from './contact/contact-ceo/contact-ceo.component';
 import { Vehicles2Component } from './vehicles2/vehicles2.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
-  {path:'dashboard', component: DashboardComponent, children:[
+  {path:'dashboard', canActivate:[AuthGuard], component: DashboardComponent, children:[
     {path:'home', component: HomeComponent},
     {path:'welcome', component: WelcomeComponent},
     {path:'data-binding', component: DataBindingComponent},
@@ -29,6 +31,7 @@ const routes: Routes = [
     {path:'contact-ceo', component:ContactCeoComponent},
     {path:'vehicles2', component:Vehicles2Component},
     {path:'create-user', component:CreateUserComponent},
+    {path:'create-vehicle', component:CreateVehicleComponent},
     {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},

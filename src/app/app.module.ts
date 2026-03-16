@@ -23,6 +23,7 @@ import { CapitalDirective } from './capital.directive';
 import { ContactModule } from './contact/contact.module';
 import { Vehicles2Component } from './vehicles2/vehicles2.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     HighlightDirective,
     CapitalDirective,
     Vehicles2Component,
-    CreateUserComponent
+    CreateUserComponent,
+    CreateVehicleComponent
   ],
   imports: [
     BrowserModule,

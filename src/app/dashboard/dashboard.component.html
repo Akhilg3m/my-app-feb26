@@ -15,8 +15,9 @@
             <li routerLink="payment/upi">upi payment</li>
             <li routerLink="payment/card">card payment</li>
             <li routerLink="create-user">Create User</li>
+            <li routerLink="create-vehicle">Create Vehicle</li>
         </ul>
-        <button routerLink="/login">logout</button>
+        <button (click)="logout()">logout</button>
     </div>
     <div class="right">
         <router-outlet></router-outlet>
