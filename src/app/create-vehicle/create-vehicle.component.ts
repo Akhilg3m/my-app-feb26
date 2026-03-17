@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ɵInternalFormsSharedModule } from '@angular/forms';
 import { VehicleService } from '../vehicle.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-vehicle',
@@ -9,7 +10,7 @@ import { VehicleService } from '../vehicle.service';
 })
 export class CreateVehicleComponent {
 
-  vehicleForm:FormGroup = new FormGroup({
+  vehicleForm: FormGroup = new FormGroup({
     Vehicle: new FormControl(),
     manufacturer: new FormControl(),
     model: new FormControl(),
@@ -20,19 +21,47 @@ export class CreateVehicleComponent {
     tyres: new FormControl()
   })
 
-  constructor(private vehicleService:VehicleService){}
-
-  submit(){
-    console.log(this.vehicleForm);
-    this.vehicleService.createVehicle(this.vehicleForm.value).subscribe(
-      (data:any)=>{
-        alert("vehicle created successfully!!!");
-        this.vehicleForm.reset();
-      },
-      (err:any)=>{
-        alert("internal server error");
+  id: string = "";
+  constructor(private vehicleService: VehicleService, private activatedRoute: ActivatedRoute) {
+    activatedRoute.params.subscribe(
+      (data: any) => {
+        this.id = data.id;
+        vehicleService.getVehicle(data.id).subscribe(
+          (data: any) => {
+            this.vehicleForm.patchValue(data);
+          }
+        )
       }
     )
+  }
+
+  submit() {
+    console.log(this.vehicleForm);
+
+    if (this.id) {
+      // edit
+      this.vehicleService.editVehicle(this.id, this.vehicleForm.value).subscribe(
+        (data: any) => {
+          alert("vehicle edited successfully!!!");
+          this.vehicleForm.reset();
+        },
+        (err: any) => {
+          alert("internal server error");
+        }
+      )
+    }
+    else {
+      // create
+      this.vehicleService.createVehicle(this.vehicleForm.value).subscribe(
+        (data: any) => {
+          alert("vehicle created successfully!!!");
+          this.vehicleForm.reset();
+        },
+        (err: any) => {
+          alert("internal server error");
+        }
+      )
+    }
   }
 
 }

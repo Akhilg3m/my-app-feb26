@@ -34,6 +34,7 @@ const routes: Routes = [
     {path:'create-user', component:CreateUserComponent},
     {path:'create-vehicle', component:CreateVehicleComponent},
     {path:'view-vehicle/:id', component:ViewVehicleComponent},
+    {path:'edit-vehicle/:id', component: CreateVehicleComponent},
     {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},
