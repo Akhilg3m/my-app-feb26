@@ -24,6 +24,7 @@ import { ContactModule } from './contact/contact.module';
 import { Vehicles2Component } from './vehicles2/vehicles2.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
     CapitalDirective,
     Vehicles2Component,
     CreateUserComponent,
-    CreateVehicleComponent
+    CreateVehicleComponent,
+    ViewVehicleComponent
   ],
   imports: [
     BrowserModule,

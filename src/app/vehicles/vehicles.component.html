@@ -35,6 +35,8 @@
             <td>{{vehicle.cost | price}}</td>
             <td>{{vehicle.tyres}}</td>
             <td>
+                <button class="btn btn-primary" routerLink="/dashboard/view-vehicle/{{vehicle.id}}">view</button>
+                <button class="btn btn-warning">edit</button>
                 <button (click)="deleteVehicle(vehicle.id)" class="btn btn-danger">delete</button>
             </td>
         </tr>
