@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-vehicles',
@@ -8,12 +9,12 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehiclesComponent {
 
-  vehicles: any = [];
+  vehicles: Vehicle[] = [];
 
   constructor(private vehicleService: VehicleService) {
 
     vehicleService.getVehicles().subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
       (err: any) => {
@@ -26,7 +27,7 @@ export class VehiclesComponent {
   term: string = "";
   filterVehicles() {
     this.vehicleService.filterVehicles(this.term).subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
       (err: any) => {
@@ -37,7 +38,7 @@ export class VehiclesComponent {
 
   pagedVehicles(page:number) {
     this.vehicleService.pagedVehicles(page).subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
       (err: any) => {
@@ -49,7 +50,7 @@ export class VehiclesComponent {
   sortVehicles(column:string) {
     this.isAsc = !this.isAsc;
     this.vehicleService.sortVehicles(column,this.isAsc?'asc':'desc').subscribe(
-      (data: any) => {
+      (data: Vehicle[]) => {
         this.vehicles = data;
       },
       (err: any) => {
@@ -60,7 +61,7 @@ export class VehiclesComponent {
 
   deleteVehicle(id: string) {
     this.vehicleService.deleteVehicle(id).subscribe(
-      (data: any) => {
+      (data: Vehicle) => {
         alert("deleted sucessfully!!!!");
         location.reload();
       },

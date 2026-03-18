@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ɵInternalFormsSharedModule } from '@angular/forms';
 import { VehicleService } from '../vehicle.service';
 import { ActivatedRoute } from '@angular/router';
+import { Vehicle } from '../vehicle';
 
 @Component({
   selector: 'app-create-vehicle',
@@ -27,7 +28,7 @@ export class CreateVehicleComponent {
       (data: any) => {
         this.id = data.id;
         vehicleService.getVehicle(data.id).subscribe(
-          (data: any) => {
+          (data: Vehicle) => {
             this.vehicleForm.patchValue(data);
           }
         )
@@ -41,7 +42,7 @@ export class CreateVehicleComponent {
     if (this.id) {
       // edit
       this.vehicleService.editVehicle(this.id, this.vehicleForm.value).subscribe(
-        (data: any) => {
+        (data: Vehicle) => {
           alert("vehicle edited successfully!!!");
           this.vehicleForm.reset();
         },
@@ -53,7 +54,7 @@ export class CreateVehicleComponent {
     else {
       // create
       this.vehicleService.createVehicle(this.vehicleForm.value).subscribe(
-        (data: any) => {
+        (data: Vehicle) => {
           alert("vehicle created successfully!!!");
           this.vehicleForm.reset();
         },

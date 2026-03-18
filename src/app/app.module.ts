@@ -15,7 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EventRegistrationComponent } from './event-registration/event-registration.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { PricePipe } from './price.pipe';
 import { RolePipe } from './role.pipe';
 import { HighlightDirective } from './highlight.directive';
@@ -25,6 +25,7 @@ import { Vehicles2Component } from './vehicles2/vehicles2.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,13 @@ import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
     ContactModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
