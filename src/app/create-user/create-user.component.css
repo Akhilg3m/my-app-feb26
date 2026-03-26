@@ -2,3 +2,7 @@ label{
     width: 100px;
     margin-bottom: 10px;
 }
+p{
+    color: red;
+    margin: 0;
+}

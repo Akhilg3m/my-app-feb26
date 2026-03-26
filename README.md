@@ -190,3 +190,25 @@ Reactive Forms:
 5) Form Validations
 
 
+
+
+TS:
+---
+name: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLengt(10)]),
+
+
+HTML:
+-----
+<div *ngIf="______CONTROL_______.touched && ______CONTROL_______.invalid">
+        <p *ngIf="______CONTROL_______.errors?.['required']">Name is required</p>
+        <p *ngIf="______CONTROL_______.errors?.['minlength']">Name shoudl contain min 3 chars</p>
+        <p *ngIf="______CONTROL_______.errors?.['maxlength']">Name shoudl contain max 10 chars</p>
+</div>
+
+      FromGroup:         userForm.get('name')
+
+      NestedFormGroup:   userForm.get('address')?.get('city')
+
+      FormArray:         cardsFormArray.controls[i]?.get('name')
+
+      
