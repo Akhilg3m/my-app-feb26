@@ -26,6 +26,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { TokenInterceptor } from './token.interceptor';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { TokenInterceptor } from './token.interceptor';
     Vehicles2Component,
     CreateUserComponent,
     CreateVehicleComponent,
-    ViewVehicleComponent
+    ViewVehicleComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

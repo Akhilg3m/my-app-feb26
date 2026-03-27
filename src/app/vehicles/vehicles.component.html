@@ -33,7 +33,9 @@
                 <img src="{{vehicle.image}}" alt="" width="100px" height="100px">
             </td>
             <td>{{vehicle.cost | price}}</td>
-            <td>{{vehicle.tyres}}</td>
+            <td>
+                {{vehicle.tyres}}
+            </td>
             <td>
                 <button class="btn btn-primary" routerLink="/dashboard/view-vehicle/{{vehicle.id}}">view</button>
                 <button class="btn btn-warning" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">edit</button>

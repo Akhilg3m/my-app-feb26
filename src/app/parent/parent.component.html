@@ -1,0 +1,20 @@
+<p>parent works!</p>
+<h1>b in parent: {{bp}}</h1>
+
+<label for="">A in parent:</label>
+<input type="text" [(ngModel)]="ap">
+
+<!-- Reusable elements -->
+<app-child [ac]="ap" (bEvent)="update($event)"></app-child>
+
+<img src="/assets/4start.jfif" alt="">
+
+<!-- <button [disabled]="true" (click)="submit()">submit</button> -->
+
+<app-rating [rating]="3">out of 5</app-rating>
+
+
+
+
+
+
