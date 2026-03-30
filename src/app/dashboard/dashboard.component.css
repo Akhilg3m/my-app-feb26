@@ -20,6 +20,8 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  padding-bottom: 200px;
 }
 
 /* App title */

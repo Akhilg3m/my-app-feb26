@@ -18,6 +18,9 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { AuthGuard } from './auth.guard';
 import { ViewVehicleComponent } from './view-vehicle/view-vehicle.component';
 import { ParentComponent } from './parent/parent.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -37,6 +40,9 @@ const routes: Routes = [
     {path:'view-vehicle/:id', component:ViewVehicleComponent},
     {path:'edit-vehicle/:id', component: CreateVehicleComponent},
     {path:'parent', component: ParentComponent},
+    {path:'items', component: ItemsComponent},
+    {path:'nav', component: NavComponent},
+    {path:'cart', component: CartComponent},
     {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},

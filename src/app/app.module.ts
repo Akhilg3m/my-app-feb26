@@ -29,6 +29,9 @@ import { TokenInterceptor } from './token.interceptor';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,10 @@ import { RatingComponent } from './rating/rating.component';
     ViewVehicleComponent,
     ParentComponent,
     ChildComponent,
-    RatingComponent
+    RatingComponent,
+    ItemsComponent,
+    NavComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
