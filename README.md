@@ -140,6 +140,12 @@ Coding steps:
 
 
 
+if(){
+      console.log()
+}
+
+
+if(){console.log()}
 
 
 

@@ -60,7 +60,8 @@ import { CartComponent } from './cart/cart.component';
     RatingComponent,
     ItemsComponent,
     NavComponent,
-    CartComponent
+    CartComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -77,6 +78,12 @@ import { CartComponent } from './cart/cart.component';
       multi: true
     }
   ],
+  exports:[
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// boilerplate code

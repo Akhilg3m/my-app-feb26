@@ -8,9 +8,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ChildComponent {
 
   @Input() ac:string = "";
-  
-
   bc:string = "";
+
   @Output() bEvent:EventEmitter<string> = new EventEmitter(); //create
 
   emit(){

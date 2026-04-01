@@ -21,6 +21,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
@@ -43,6 +44,7 @@ const routes: Routes = [
     {path:'items', component: ItemsComponent},
     {path:'nav', component: NavComponent},
     {path:'cart', component: CartComponent},
+    {path:'test', component: TestComponent},
     {path:'payment', loadChildren:()=>import('./payment/payment.module').then(m=>m.PaymentModule)}
   ]},
   {path:'', component: LoginComponent},
